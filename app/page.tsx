@@ -52,6 +52,7 @@ const experiences = [
     title: "ETDA Bootcamp 2026 Empowering Digital Citizens to Build Digital Trust",
     period: "2026",
     role: "Participant",
+    image: "/long-do-dev.jpg",
     highlights: [
       "Learn about VC ecosystem from ETDA",
       "LongCheck: Verification as a Service (VaaS) is a platform for verifying digital certificates (VC) for businesses and SMEs, helping to securely verify user identities and reduce risks related to PDPA and cybersecurity.",
@@ -310,6 +311,17 @@ export default function Portfolio() {
                           </li>
                         ))}
                       </ul>
+                      {exp.image && (
+                        <div className="mt-6 rounded-xl overflow-hidden border border-border/50 max-w-md">
+                          <Image
+                            src={exp.image}
+                            alt={exp.title}
+                            width={700}
+                            height={350}
+                            className="w-full h-auto object-cover"
+                          />
+                        </div>
+                      )}
                     </CardContent>
                   </Card>
                 </motion.div>
