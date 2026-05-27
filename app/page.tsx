@@ -389,7 +389,7 @@ export default function Portfolio() {
                     </h3>
                     <p className="text-primary font-medium">School of Information Technology</p>
                     <p className="text-muted-foreground mt-2">
-                      Bachelor&apos;s Degree in Computer Science / Information Technology
+                      Bachelor&apos;s Degree in School of Information Technology
                     </p>
                   </div>
                 </div>
