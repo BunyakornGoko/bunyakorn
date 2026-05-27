@@ -48,6 +48,16 @@ const experiences = [
       "Developed and maintained the BMA Training course reservation system using Ruby on Rails.",
     ],
   },
+  {
+    title: "ETDA Bootcamp 2026 Empowering Digital Citizens to Build Digital Trust",
+    period: "2026",
+    role: "Participant",
+    highlights: [
+      "Learn about VC ecosystem from ETDA",
+      "LongCheck: Verification as a Service (VaaS) is a platform for verifying digital certificates (VC) for businesses and SMEs, helping to securely verify user identities and reduce risks related to PDPA and cybersecurity.",
+      "We are the Long Do Dev team, and we received an honorable mention at ETDA 2026."
+    ],
+  }
 ]
 
 const softSkills = [
