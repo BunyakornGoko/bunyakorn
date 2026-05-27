@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Github, Linkedin, Mail, Phone, MapPin, ExternalLink, Menu, X, ChevronDown } from "lucide-react"
+import { Github, Linkedin, Facebook, Mail, Phone, MapPin, ExternalLink, Menu, X, ChevronDown } from "lucide-react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -467,6 +467,14 @@ export default function Portfolio() {
                 className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
               >
                 <Linkedin size={24} />
+              </a>
+              <a
+                href="https://www.facebook.com/bunyakorn.goko/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+              >
+                <Facebook size={24} />
               </a>
             </div>
           </motion.div>
