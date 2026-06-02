@@ -57,7 +57,9 @@ const experiences = [
       "Built a 3-tier architecture with React, Golang, PostgreSQL and used Model Context Protocol to stream real-time stock price & news to the AI layer.",
       "Integrated GPT-5-mini for Risk Assessment, Financial Health Check, Investment Recommendation, ChatBot, and Tax Deduction features.",
       "Managed infrastructure with Nginx and configured reverse proxy for public IP access.",
+      "Fanato team won 1st runner-up in the D-DAY IT Bangmod 2026."
     ],
+    images: ["/fanato-dashboard.png", "/fanato-poster.png", "/fanato-team.png"],
   },
   {
     title: "Project BMA Training — Bangkok",
@@ -370,8 +372,8 @@ export default function Portfolio() {
                   key={item.name}
                   href={item.href}
                   className={`relative text-sm font-medium transition-colors duration-200 ${activeSection === item.href.slice(1)
-                      ? "text-primary"
-                      : "text-muted-foreground hover:text-foreground"
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-foreground"
                     }`}
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -696,6 +698,23 @@ export default function Portfolio() {
                             </li>
                           ))}
                         </ul>
+                        {exp.images && exp.images.length > 0 && (
+                          <div className="mt-5 space-y-2">
+                            {/* Dashboard — full width */}
+                            <div className="rounded-xl overflow-hidden border border-white/10">
+                              <Image src={exp.images[0]} alt={`${exp.title} dashboard`} width={600} height={300} className="w-full h-auto object-cover" />
+                            </div>
+                            {/* Poster (1/3) + Team (2/3) */}
+                            <div className="grid grid-cols-3 gap-2">
+                              <div className="col-span-1 rounded-xl overflow-hidden border border-white/10">
+                                <Image src={exp.images[1]} alt={`${exp.title} poster`} width={200} height={300} className="w-full h-full object-cover" />
+                              </div>
+                              <div className="col-span-2 rounded-xl overflow-hidden border border-white/10">
+                                <Image src={exp.images[2]} alt={`${exp.title} team`} width={400} height={300} className="w-full h-full object-cover" />
+                              </div>
+                            </div>
+                          </div>
+                        )}
                         {exp.image && (
                           <div className="mt-5 rounded-xl overflow-hidden border border-white/10">
                             <Image src={exp.image} alt={exp.title} width={600} height={300} className="w-full h-auto object-cover" />
