@@ -51,6 +51,9 @@ export const metadata: Metadata = {
     description: 'Result-oriented Full-Stack Developer with a strong foundation in Ruby on Rails, Golang, React, and PostgreSQL.',
     images: ['/og-image.png'],
   },
+  verification: {
+    google: 'FhbpbJUs960Fcz3KNMHXJq32HHlWALV3M7ful4rEjJc',
+  },
   robots: {
     index: true,
     follow: true,
