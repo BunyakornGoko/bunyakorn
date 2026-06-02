@@ -4,19 +4,64 @@ import { Analytics } from '@vercel/analytics/next'
 import { SmoothScroll } from '@/components/smooth-scroll'
 import './globals.css'
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
   variable: '--font-inter'
 });
-const geistMono = Geist_Mono({ 
+const geistMono = Geist_Mono({
   subsets: ["latin"],
   variable: '--font-geist-mono'
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://bunyakorn-jet.vercel.app'
+
 export const metadata: Metadata = {
-  title: 'Bunyakorn Pornsombatpaibool | Full-Stack Developer',
-  description: 'Result-oriented Full-Stack Developer with a strong foundation in Ruby On Rails, Golang, React, and PostgreSQL. Experienced in building scalable 3-tier architectures.',
-  generator: 'v0.app',
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: 'Bunyakorn Pornsombatpaibool | Full-Stack Developer',
+    template: '%s | Bunyakorn Pornsombatpaibool',
+  },
+  description: 'Result-oriented Full-Stack Developer with a strong foundation in Ruby on Rails, Golang, React, and PostgreSQL. Experienced in building scalable 3-tier architectures and integrating advanced AI solutions like GPT and MCP.',
+  keywords: [
+    'Full-Stack Developer', 'Ruby on Rails', 'Golang', 'React', 'PostgreSQL',
+    'Software Engineer', 'Web Developer', 'AI Integration', 'Bangkok', 'KMUTT',
+    'Bunyakorn', 'BunyakornGoko',
+  ],
+  authors: [{ name: 'Bunyakorn Pornsombatpaibool', url: 'https://github.com/BunyakornGoko' }],
+  creator: 'Bunyakorn Pornsombatpaibool',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: siteUrl,
+    siteName: 'Bunyakorn Pornsombatpaibool',
+    title: 'Bunyakorn Pornsombatpaibool | Full-Stack Developer',
+    description: 'Result-oriented Full-Stack Developer with a strong foundation in Ruby on Rails, Golang, React, and PostgreSQL. Experienced in building scalable 3-tier architectures and integrating advanced AI solutions.',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Bunyakorn Pornsombatpaibool — Full-Stack Developer',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Bunyakorn Pornsombatpaibool | Full-Stack Developer',
+    description: 'Result-oriented Full-Stack Developer with a strong foundation in Ruby on Rails, Golang, React, and PostgreSQL.',
+    images: ['/og-image.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: [
       {
@@ -42,7 +87,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="th" className="bg-background">
+    <html lang="en" className="bg-background">
       <body className={`${inter.variable} ${geistMono.variable} font-sans antialiased`}>
         <SmoothScroll>
           {children}
