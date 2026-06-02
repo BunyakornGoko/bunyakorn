@@ -11,11 +11,11 @@ import Image from "next/image"
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const navItems = [
-  { name: "About",      href: "#about" },
+  { name: "About", href: "#about" },
   { name: "Experience", href: "#experience" },
-  { name: "Skills",     href: "#skills" },
-  { name: "Education",  href: "#education" },
-  { name: "Contact",    href: "#contact" },
+  { name: "Skills", href: "#skills" },
+  { name: "Education", href: "#education" },
+  { name: "Contact", href: "#contact" },
 ]
 
 const ROLES = [
@@ -99,22 +99,22 @@ const softSkills = [
 ]
 
 const contactItems = [
-  { icon: Phone, label: "Phone",    value: "080-068-0597",            href: "tel:0800680597" },
-  { icon: Mail,  label: "Email",    value: "bunyakorn.porn@gmail.com", href: "mailto:bunyakorn.porn@gmail.com" },
-  { icon: MapPin, label: "Location", value: "Bangkok, Thailand",       href: null },
+  { icon: Phone, label: "Phone", value: "080-068-0597", href: "tel:0800680597" },
+  { icon: Mail, label: "Email", value: "bunyakorn.porn@gmail.com", href: "mailto:bunyakorn.porn@gmail.com" },
+  { icon: MapPin, label: "Location", value: "Bangkok, Thailand", href: null },
 ]
 
 const socialLinks = [
-  { icon: Github,   href: "https://github.com/BunyakornGoko",                                    label: "GitHub"   },
-  { icon: Linkedin, href: "https://www.linkedin.com/in/bunyakorn-pornsombatpaibool-3a4886254/",   label: "LinkedIn" },
-  { icon: Facebook, href: "https://www.facebook.com/bunyakorn.goko/",                             label: "Facebook" },
+  { icon: Github, href: "https://github.com/BunyakornGoko", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/bunyakorn-pornsombatpaibool-3a4886254/", label: "LinkedIn" },
+  { icon: Facebook, href: "https://www.facebook.com/bunyakorn.goko/", label: "Facebook" },
 ]
 
 const heroTechBadges = [
-  { label: "Go",    top: "8%",  left: "-14%" },
-  { label: "RoR",   top: "74%", left: "-14%" },
-  { label: "React", top: "82%", left: "92%"  },
-  { label: "AI",    top: "5%",  left: "90%"  },
+  { label: "Go", top: "8%", left: "-14%" },
+  { label: "RoR", top: "74%", left: "-14%" },
+  { label: "React", top: "82%", left: "92%" },
+  { label: "AI", top: "5%", left: "90%" },
 ]
 
 // ─── Hooks ────────────────────────────────────────────────────────────────────
@@ -178,8 +178,8 @@ function TiltCard({ children, className = "" }: { children: React.ReactNode; cla
   const onMove = (e: React.MouseEvent) => {
     if (!ref.current) return
     const r = ref.current.getBoundingClientRect()
-    const x = ((e.clientY - r.top)  / r.height - 0.5) * 14
-    const y = -((e.clientX - r.left) / r.width  - 0.5) * 14
+    const x = ((e.clientY - r.top) / r.height - 0.5) * 14
+    const y = -((e.clientX - r.left) / r.width - 0.5) * 14
     setTilt({ x, y, lit: true })
   }
 
@@ -369,11 +369,10 @@ export default function Portfolio() {
                 <motion.a
                   key={item.name}
                   href={item.href}
-                  className={`relative text-sm font-medium transition-colors duration-200 ${
-                    activeSection === item.href.slice(1)
+                  className={`relative text-sm font-medium transition-colors duration-200 ${activeSection === item.href.slice(1)
                       ? "text-primary"
                       : "text-muted-foreground hover:text-foreground"
-                  }`}
+                    }`}
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: i * 0.08 }}
@@ -497,9 +496,9 @@ export default function Portfolio() {
             {/* Stats row */}
             <div className="flex gap-10 mt-10 pt-8 border-t border-white/5">
               {[
-                { label: "Projects",    value: 10, suffix: "+" },
-                { label: "Languages",   value: 8,  suffix: "+" },
-                { label: "Frameworks",  value: 9,  suffix: "+" },
+                { label: "Projects", value: 10, suffix: "+" },
+                { label: "Languages", value: 8, suffix: "+" },
+                { label: "Frameworks", value: 9, suffix: "+" },
               ].map(stat => (
                 <div key={stat.label}>
                   <p className="text-2xl font-black text-primary font-mono">
@@ -516,7 +515,7 @@ export default function Portfolio() {
             initial={{ opacity: 0, x: 60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-            className="w-full flex justify-center lg:w-auto lg:justify-end"
+            className="w-full flex justify-center lg:w-auto lg:justify-end lg:pr-14"
           >
             <div className="relative flex items-center mt-16 lg:mt-0 justify-center w-[220px] h-[220px] sm:w-[260px] sm:h-[260px] lg:w-[300px] lg:h-[300px]">
               {/* Inner ring — always visible */}
