@@ -521,7 +521,7 @@ export default function Portfolio() {
               {/* Inner ring — always visible */}
               <div className="absolute rounded-full border border-primary/25 animate-spin-slow" style={{ inset: "-28px" }} />
               {/* Outer ring — desktop only */}
-              <div className="absolute hidden lg:block rounded-full border border-primary/12 animate-spin-slow-reverse" style={{ inset: "-52px" }} />
+              <div className="absolute rounded-full border border-primary/12 animate-spin-slow-reverse" style={{ inset: "-52px" }} />
 
               {/* Orbiting dot on inner ring */}
               <div className="absolute animate-orbit pointer-events-none" style={{ inset: "-28px", borderRadius: "50%" }}>
