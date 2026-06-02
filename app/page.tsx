@@ -67,6 +67,7 @@ const experiences = [
     role: "Intern at ODT — 7 months",
     accent: "from-violet-500/15 to-purple-500/10",
     dotColor: "bg-violet-400",
+    image: "/bma-team.png",
     highlights: [
       "Facilitated team collaboration to enhance system performance.",
       "Designed ER Diagrams and applied Large Scale Scrum.",
