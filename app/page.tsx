@@ -425,14 +425,14 @@ export default function Portfolio() {
           HERO
       ═══════════════════════════════════════════════════════════════════════ */}
       <section className="relative min-h-screen flex items-center justify-center pt-16 px-4">
-        <div className="relative z-10 max-w-6xl mx-auto w-full flex flex-col-reverse md:grid md:grid-cols-[1fr_auto] md:gap-12 lg:gap-20 items-center">
+        <div className="relative z-10 max-w-6xl mx-auto w-full flex flex-col-reverse lg:grid lg:grid-cols-[1fr_auto] lg:gap-16 xl:gap-20 items-center">
 
           {/* Text */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="w-full mt-14 md:mt-0"
+            className="w-full mt-10 lg:mt-0"
           >
             <motion.p
               className="font-mono text-sm text-primary mb-3 flex items-center gap-3"
@@ -516,13 +516,13 @@ export default function Portfolio() {
             initial={{ opacity: 0, x: 60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-            className="flex justify-center md:justify-end flex-shrink-0"
+            className="w-full flex justify-center lg:w-auto lg:justify-end"
           >
-            <div className="relative flex items-center mt-22 md:mt-0 justify-center w-[220px] h-[220px] md:w-[300px] md:h-[300px]">
+            <div className="relative flex items-center mt-16 lg:mt-0 justify-center w-[220px] h-[220px] sm:w-[260px] sm:h-[260px] lg:w-[300px] lg:h-[300px]">
               {/* Inner ring — always visible */}
               <div className="absolute rounded-full border border-primary/25 animate-spin-slow" style={{ inset: "-28px" }} />
               {/* Outer ring — desktop only */}
-              <div className="absolute rounded-full border border-primary/12 animate-spin-slow-reverse" style={{ inset: "-52px" }} />
+              <div className="absolute hidden lg:block rounded-full border border-primary/12 animate-spin-slow-reverse" style={{ inset: "-52px" }} />
 
               {/* Orbiting dot on inner ring */}
               <div className="absolute animate-orbit pointer-events-none" style={{ inset: "-28px", borderRadius: "50%" }}>
