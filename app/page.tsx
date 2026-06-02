@@ -796,7 +796,7 @@ export default function Portfolio() {
             <TiltCard className="rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/6 to-transparent shimmer-border overflow-hidden">
               <div className="p-8 flex flex-col md:flex-row items-center gap-6">
                 <div className="relative w-20 h-20 rounded-2xl bg-primary/10 border border-primary/25 flex items-center justify-center flex-shrink-0 overflow-hidden group">
-                  <span className="text-4xl font-black text-primary z-10">K</span>
+                  <Image src="/kmutt.png" alt="KMUTT" width={80} height={80} className="w-full h-full object-cover z-10" />
                   <div className="absolute inset-0 bg-primary/20 scale-0 group-hover:scale-100 rounded-2xl transition-transform duration-300" />
                 </div>
                 <div>
