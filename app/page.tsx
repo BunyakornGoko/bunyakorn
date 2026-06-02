@@ -7,6 +7,7 @@ import {
   ExternalLink, Menu, X, ChevronDown, Code2, Server, Wrench, Palette,
 } from "lucide-react"
 import Image from "next/image"
+import { StarField } from "@/components/StarField"
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
@@ -340,15 +341,11 @@ export default function Portfolio() {
       {/* ── Circular scroll progress (bottom-right) ──────────────────────────── */}
       <CircularScrollProgress />
 
+      {/* ── Star field ───────────────────────────────────────────────────────── */}
+      <StarField />
+
       {/* ── Grid background ──────────────────────────────────────────────────── */}
       <div className="fixed inset-0 z-0 grid-bg" />
-
-      {/* ── Floating orbs ────────────────────────────────────────────────────── */}
-      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 -left-48 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px] animate-orb-1" />
-        <div className="absolute top-3/4 -right-48 w-[400px] h-[400px] rounded-full bg-accent/5 blur-[100px] animate-orb-2" />
-        <div className="absolute top-1/2 left-1/3 w-[300px] h-[300px] rounded-full bg-primary/3 blur-[80px] animate-orb-3" />
-      </div>
 
 
       {/* ── Navigation ───────────────────────────────────────────────────────── */}
