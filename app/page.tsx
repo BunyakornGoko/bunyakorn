@@ -432,7 +432,7 @@ export default function Portfolio() {
             initial={{ opacity: 0, x: -60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="w-full mt-10 md:mt-0"
+            className="w-full mt-14 md:mt-0"
           >
             <motion.p
               className="font-mono text-sm text-primary mb-3 flex items-center gap-3"
@@ -518,11 +518,11 @@ export default function Portfolio() {
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
             className="flex justify-center md:justify-end flex-shrink-0"
           >
-            <div className="relative flex items-center mt-24 md:mt-0 justify-center w-[220px] h-[220px] md:w-[300px] md:h-[300px]">
+            <div className="relative flex items-center mt-22 md:mt-0 justify-center w-[220px] h-[220px] md:w-[300px] md:h-[300px]">
               {/* Inner ring — always visible */}
               <div className="absolute rounded-full border border-primary/25 animate-spin-slow" style={{ inset: "-28px" }} />
               {/* Outer ring — desktop only */}
-              <div className="absolute rounded-full border border-primary/12 animate-spin-slow-reverse hidden md:block" style={{ inset: "-52px" }} />
+              <div className="absolute rounded-full border border-primary/12 animate-spin-slow-reverse" style={{ inset: "-52px" }} />
 
               {/* Orbiting dot on inner ring */}
               <div className="absolute animate-orbit pointer-events-none" style={{ inset: "-28px", borderRadius: "50%" }}>
@@ -551,7 +551,7 @@ export default function Portfolio() {
               {heroTechBadges.map((b, i) => (
                 <motion.div
                   key={b.label}
-                  className="absolute hidden md:block px-2.5 py-1 bg-background/90 border border-primary/30 rounded-full text-xs font-mono text-primary whitespace-nowrap"
+                  className="absolute px-2.5 py-1 bg-background/90 border border-primary/30 rounded-full text-xs font-mono text-primary whitespace-nowrap"
                   style={{ top: b.top, left: b.left }}
                   animate={{ y: [0, -7, 0] }}
                   transition={{ duration: 2.2 + i * 0.4, repeat: Infinity, ease: "easeInOut", delay: i * 0.35 }}
