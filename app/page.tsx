@@ -308,7 +308,7 @@ function SectionHeading({ number, title }: { number: string; title: string }) {
       initial={{ opacity: 0, x: -24 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.55 }}
-      viewport={{ once: true }}
+      viewport={{ once: false }}
       className="flex items-center gap-4"
     >
       <span className="font-mono text-primary text-lg font-bold">{number}.</span>
@@ -588,7 +588,7 @@ export default function Portfolio() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               className="space-y-5"
             >
               <p className="text-muted-foreground leading-relaxed text-[0.92rem]">
@@ -618,7 +618,7 @@ export default function Portfolio() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               <p className="text-[0.7rem] text-muted-foreground font-mono uppercase tracking-widest mb-4">Soft Skills</p>
               <div className="grid grid-cols-2 gap-2.5">
@@ -628,7 +628,7 @@ export default function Portfolio() {
                     initial={{ opacity: 0, x: -12 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: i * 0.07 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     className="flex items-center gap-2.5 p-3 rounded-xl border border-white/5 bg-white/[0.02] hover:border-primary/30 hover:bg-primary/5 transition-all duration-200 group cursor-default"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 group-hover:shadow-glow transition-shadow" />
@@ -659,7 +659,7 @@ export default function Portfolio() {
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.65, delay: i * 0.08 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: false }}
                   className={`relative flex flex-col md:flex-row gap-0 ${i % 2 === 0 ? "" : "md:flex-row-reverse"}`}
                 >
                   {/* Dot on timeline */}
@@ -742,7 +742,7 @@ export default function Portfolio() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.55, delay: ci * 0.08 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
               >
                 <TiltCard className="h-full rounded-2xl border border-white/8 bg-white/[0.025] overflow-hidden shimmer-border">
                   <div className="p-6">
@@ -761,7 +761,7 @@ export default function Portfolio() {
                             default: { duration: 0.18, delay: ci * 0.08 + si * 0.035 },
                             scale: { duration: 0.12 },
                           }}
-                          viewport={{ once: true }}
+                          viewport={{ once: false }}
                           className="px-3 py-1.5 bg-background/60 border border-primary/18 text-muted-foreground rounded-lg text-xs font-mono cursor-default hover:border-primary hover:text-primary hover:shadow-glow transition-all duration-200"
                         >
                           {skill}
@@ -787,7 +787,7 @@ export default function Portfolio() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             className="mt-12"
           >
             <TiltCard className="rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/6 to-transparent shimmer-border overflow-hidden">
@@ -818,7 +818,7 @@ export default function Portfolio() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             className="text-center"
           >
             <p className="font-mono text-primary text-xs uppercase tracking-widest mb-3">05. What&apos;s Next?</p>
