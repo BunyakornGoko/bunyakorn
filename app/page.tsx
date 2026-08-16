@@ -8,6 +8,7 @@ import {
 } from "lucide-react"
 import Image from "next/image"
 import { StarField } from "@/components/StarField"
+import { WorkHistoryCard, workHistory } from "@/components/WorkHistoryCard"
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
@@ -638,6 +639,8 @@ export default function Portfolio() {
               </div>
             </motion.div>
           </div>
+
+          <WorkHistoryCard history={workHistory} />
         </div>
       </section>
 
