@@ -9,6 +9,7 @@ import {
 import Image from "next/image"
 import { StarField } from "@/components/StarField"
 import { WorkHistoryCard, workHistory } from "@/components/WorkHistoryCard"
+import { periodYears } from "@/lib/utils"
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
@@ -49,6 +50,19 @@ const skills = {
 
 const experiences = [
   {
+    title: "ETDA Bootcamp 2026 — Empowering Digital Citizens",
+    period: "2026",
+    role: "Participant — Honorable Mention",
+    accent: "from-emerald-500/15 to-teal-500/10",
+    dotColor: "bg-emerald-400",
+    image: "/long-do-dev.jpg",
+    highlights: [
+      "Learned about the VC ecosystem from ETDA.",
+      "LongCheck: Verification as a Service (VaaS) — verifies digital certificates for businesses and SMEs, reducing PDPA & cybersecurity risks.",
+      "Long Do Dev team received an honorable mention at ETDA 2026.",
+    ],
+  },
+  {
     title: "Project Fanato — The Financial Assistance",
     period: "2025 – 2026",
     role: "Senior Project @ KMUTT",
@@ -79,20 +93,12 @@ const experiences = [
       "Developed and maintained the BMA Training course reservation system using Ruby on Rails.",
     ],
   },
-  {
-    title: "ETDA Bootcamp 2026 — Empowering Digital Citizens",
-    period: "2026",
-    role: "Participant — Honorable Mention",
-    accent: "from-emerald-500/15 to-teal-500/10",
-    dotColor: "bg-emerald-400",
-    image: "/long-do-dev.jpg",
-    highlights: [
-      "Learned about the VC ecosystem from ETDA.",
-      "LongCheck: Verification as a Service (VaaS) — verifies digital certificates for businesses and SMEs, reducing PDPA & cybersecurity risks.",
-      "Long Do Dev team received an honorable mention at ETDA 2026.",
-    ],
-  },
 ]
+
+const sortedExperiences = [...experiences].sort((a, b) => {
+  const pa = periodYears(a.period), pb = periodYears(b.period)
+  return pb.end - pa.end || pb.start - pa.start
+})
 
 const softSkills = [
   "Leadership",
@@ -656,7 +662,7 @@ export default function Portfolio() {
             <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px timeline-line md:-translate-x-1/2" />
 
             <div className="space-y-14">
-              {experiences.map((exp, i) => (
+              {sortedExperiences.map((exp, i) => (
                 <motion.div
                   key={exp.title}
                   initial={{ opacity: 0, y: 40 }}
