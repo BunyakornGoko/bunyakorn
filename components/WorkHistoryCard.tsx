@@ -19,7 +19,7 @@ export type WorkGroup = { company: string; logo: string; positions: WorkPosition
 export const workHistory: WorkGroup[] = [
   {
     company: "ODT",
-    logo: "/ODT Logo White.png",
+    logo: "/ODDS Logo.png",
     positions: [
       { title: "Software Engineer", type: "Full-time", period: "May 2026 – Present", current: true },
       { title: "Software Engineer", type: "Part-time", period: "Mar 2026 – May 2026", duration: "3 mos" },
@@ -27,7 +27,7 @@ export const workHistory: WorkGroup[] = [
   },
   {
     company: "ODT",
-    logo: "/ODT Logo White.png",
+    logo: "/ODDS Logo.png",
     positions: [
       { title: "Software Engineer", type: "ODDS · Internship", period: "Dec 2024 – Aug 2025", duration: "9 mos", location: "Thailand · On-site" },
     ],
