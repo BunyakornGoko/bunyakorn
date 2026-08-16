@@ -600,19 +600,7 @@ export default function Portfolio() {
                 My approach combines technical expertise with a deep understanding of user needs, ensuring that every project
                 I work on delivers both functionality and an exceptional user experience.
               </p>
-              <div className="pt-4 border-t border-white/5">
-                <p className="text-[0.7rem] text-muted-foreground font-mono uppercase tracking-widest mb-3">Languages</p>
-                <div className="flex gap-3 flex-wrap">
-                  {["English (Intermediate)", "Thai (Native)"].map(lang => (
-                    <span
-                      key={lang}
-                      className="px-3.5 py-1.5 border border-primary/30 bg-primary/5 rounded-full text-xs text-primary font-mono"
-                    >
-                      {lang}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              <WorkHistoryCard history={workHistory} />
             </motion.div>
 
             <motion.div
@@ -637,10 +625,22 @@ export default function Portfolio() {
                   </motion.div>
                 ))}
               </div>
+
+              <div className="mt-8 pt-4 border-t border-white/5">
+                <p className="text-[0.7rem] text-muted-foreground font-mono uppercase tracking-widest mb-3">Languages</p>
+                <div className="flex gap-3 flex-wrap">
+                  {["English (Intermediate)", "Thai (Native)"].map(lang => (
+                    <span
+                      key={lang}
+                      className="px-3.5 py-1.5 border border-primary/30 bg-primary/5 rounded-full text-xs text-primary font-mono"
+                    >
+                      {lang}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </motion.div>
           </div>
-
-          <WorkHistoryCard history={workHistory} />
         </div>
       </section>
 

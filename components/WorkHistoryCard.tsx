@@ -37,7 +37,7 @@ export const workHistory: WorkGroup[] = [
 export function WorkHistoryCard({ history }: { history: WorkGroup[] }) {
   return (
     <motion.div
-      className="mt-14 max-w-2xl rounded-xl border border-white/10 bg-white/[0.03] p-4"
+      className="mt-15 pt-4 border-t border-white/5"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
